@@ -1,63 +1,51 @@
 #!/bin/bash
-#wget https://github.com/${GitUser}/
-GitUser="KhaiVpn767"
-#IZIN SCRIPT
-MYIP=$(curl -sS ipv4.icanhazip.com)
-# Valid Script
-VALIDITY () {
-    today=`date -d "0 days" +"%Y-%m-%d"`
-    Exp1=$(curl https://raw.githubusercontent.com/${GitUser}/allow/main/ipvps.conf | grep $MYIP | awk '{print $4}')
-    if [[ $today < $Exp1 ]]; then
-    echo -e "\e[32mYOUR SCRIPT ACTIVE..\e[0m"
-    else
-    echo -e "\e[31mYOUR SCRIPT HAS EXPIRED!\e[0m";
-    echo -e "\e[31mPlease renew your ipvps first\e[0m"
-    exit 0
-fi
-}
-IZIN=$(curl https://raw.githubusercontent.com/${GitUser}/allow/main/ipvps.conf | awk '{print $5}' | grep $MYIP)
-if [ $MYIP = $IZIN ]; then
-echo -e "\e[32mPermission Accepted...\e[0m"
-VALIDITY
-else
-echo -e "\e[31mPermission Denied!\e[0m";
-echo -e "\e[31mPlease buy script first\e[0m"
-exit 0
-fi
-clear
+#random
 apt install jq curl -y
-DOMAIN=KhaiVpn767-vpn.do
-sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
-SUB_DOMAIN=${sub}.KhaiVpn767.me
-CF_ID=khaVPN2601@gmail.com
-CF_KEY=14b348d2fd20de44e30e5c02a6ede439d6af8
+rm -rf /root/xray/scdomain
+mkdir -p /root/xray
+clear
+echo ""
+echo ""
+echo ""
+#sub=$(</dev/urandom tr -dc a-z0-9 | head -c3)
+read -rp "Input Domain Name. Example ( kontol12 ): " -e sub
+#DOMAIN=serverpremium.biz.id
+#SUB_DOMAIN=${sub}.serverpremium.biz.id
+#CF_ID=vscobangst111@gmail.com
+#CF_KEY=4a912a2d56a1b3837d48751da5334b74a4fb8
+DOMAIN=vpsteam.my.id
+SUB_DOMAIN=${sub}.cf.vpsteam.my.id
+CF_ID=mydrive5895@gmail.com
+CF_KEY=de485094e52cae661d78462cefe9b4e09bb8a
 set -euo pipefail
-IP=$(wget -qO- icanhazip.com);
+IP=$(curl -sS ifconfig.me);
 echo "Updating DNS for ${SUB_DOMAIN}..."
 ZONE=$(curl -sLX GET "https://api.cloudflare.com/client/v4/zones?name=${DOMAIN}&status=active" \
-     -H "X-Auth-Email: ${CF_ID}" \
-     -H "X-Auth-Key: ${CF_KEY}" \
-     -H "Content-Type: application/json" | jq -r .result[0].id)
-
+-H "X-Auth-Email: ${CF_ID}" \
+-H "X-Auth-Key: ${CF_KEY}" \
+-H "Content-Type: application/json" | jq -r .result[0].id)
 RECORD=$(curl -sLX GET "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_records?name=${SUB_DOMAIN}" \
-     -H "X-Auth-Email: ${CF_ID}" \
-     -H "X-Auth-Key: ${CF_KEY}" \
-     -H "Content-Type: application/json" | jq -r .result[0].id)
-
+-H "X-Auth-Email: ${CF_ID}" \
+-H "X-Auth-Key: ${CF_KEY}" \
+-H "Content-Type: application/json" | jq -r .result[0].id)
 if [[ "${#RECORD}" -le 10 ]]; then
-     RECORD=$(curl -sLX POST "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_records" \
-     -H "X-Auth-Email: ${CF_ID}" \
-     -H "X-Auth-Key: ${CF_KEY}" \
-     -H "Content-Type: application/json" \
-     --data '{"type":"A","name":"'${SUB_DOMAIN}'","content":"'${IP}'","ttl":120,"proxied":false}' | jq -r .result.id)
+RECORD=$(curl -sLX POST "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_records" \
+-H "X-Auth-Email: ${CF_ID}" \
+-H "X-Auth-Key: ${CF_KEY}" \
+-H "Content-Type: application/json" \
+--data '{"type":"A","name":"'${SUB_DOMAIN}'","content":"'${IP}'","ttl":120,"proxied":false}' | jq -r .result.id)
 fi
-
 RESULT=$(curl -sLX PUT "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_records/${RECORD}" \
-     -H "X-Auth-Email: ${CF_ID}" \
-     -H "X-Auth-Key: ${CF_KEY}" \
-     -H "Content-Type: application/json" \
-     --data '{"type":"A","name":"'${SUB_DOMAIN}'","content":"'${IP}'","ttl":120,"proxied":false}')
-echo "Host : $SUB_DOMAIN"
-echo "IP=" >> /var/lib/premium-script/ipvps.conf
-echo $SUB_DOMAIN > /root/domain
-rm -f /root/cf.sh
+-H "X-Auth-Email: ${CF_ID}" \
+-H "X-Auth-Key: ${CF_KEY}" \
+-H "Content-Type: application/json" \
+--data '{"type":"A","name":"'${SUB_DOMAIN}'","content":"'${IP}'","ttl":120,"proxied":false}')
+
+echo "$SUB_DOMAIN" > /root/domain
+echo "$SUB_DOMAIN" > /root/scdomain
+echo "$SUB_DOMAIN" > /etc/xray/domain
+echo "$SUB_DOMAIN" > /etc/v2ray/domain
+echo "$SUB_DOMAIN" > /etc/xray/scdomain
+echo "IP=$SUB_DOMAIN" > /var/lib/kyt/ipvps.conf
+rm -rf cf
+sleep 1
