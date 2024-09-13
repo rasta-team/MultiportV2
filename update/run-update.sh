@@ -1,6 +1,6 @@
 #!/bin/bash
-#wget https://github.com/${GitUser}/
-GitUser="KhaiVpn767"
+#wget https://github.com/rasta-team/
+GitUser="rasta-team"
 if [ "${EUID}" -ne 0 ]; then
 		echo "You need to run this script as root"
 		exit 1
@@ -11,7 +11,7 @@ if [ "$(systemd-detect-virt)" == "openvz" ]; then
 fi
 echo ""
 version=$(cat /home/ver)
-ver=$( curl https://raw.githubusercontent.com/${GitUser}/version/main/version.conf )
+ver=$( curl https://raw.githubusercontent.com/rasta-team/version/main/version.conf )
 clear
 # LINE COLOUR
 line=$(cat /etc/line)
@@ -29,7 +29,7 @@ Info1="${Green_font_prefix}($version)${Font_color_suffix}"
 Info2="${Green_font_prefix}(LATEST VERSION)${Font_color_suffix}"
 Error="Version ${Green_font_prefix}[$ver]${Font_color_suffix} available${Red_font_prefix}[Please Update]${Font_color_suffix}"
 version=$(cat /home/ver)
-new_version=$( curl https://raw.githubusercontent.com/${GitUser}/version/main/version.conf | grep $version )
+new_version=$( curl https://raw.githubusercontent.com/rasta-team/version/main/version.conf | grep $version )
 #Status Version
 if [ $version = $new_version ]; then
 sts="${Info2}"
@@ -57,7 +57,7 @@ read -p "Please Choose 1 or x & y : " option2
 case $option2 in
 1)
 version=$(cat /home/ver)
-new_version=$( curl https://raw.githubusercontent.com/${GitUser}/version/main/version.conf | grep $version )
+new_version=$( curl https://raw.githubusercontent.com/rasta-team/version/main/version.conf | grep $version )
 if [ $version = $new_version ]; then
 clear
 echo ""
@@ -85,7 +85,7 @@ sleep 1
 echo ""
 # UPDATE RUN-UPDATE
 cd /usr/bin
-wget -O run-update "https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/update/run-update.sh"
+wget -O run-update "https://raw.githubusercontent.com/rasta-team/MultiportV2/main/update/run-update.sh"
 chmod +x run-update
 # RUN UPDATE
 echo ""
@@ -97,25 +97,25 @@ echo ""
 echo -e "\e[0;32mNew Version Downloading started!\e[0m"
 sleep 2
 cd /usr/bin
-wget -O update "https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/update/update.sh"
-wget -O run-update "https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/update/run-update.sh"
-wget -O message-ssh "https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/update/message-ssh.sh"
-wget -O change-port "https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/change.sh"
-wget -O system "https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/menu/system.sh"
-wget -O menu "https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/menu.sh"
-wget -O add-host "https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/system/add-host.sh"
-wget -O check-sc "https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/system/running.sh"
-wget -O cert "https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/cert.sh"
-wget -O trojaan "https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/menu/trojaan.sh"
-wget -O xraay2 "https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/menu/xraay2.sh"
-wget -O xp "https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/xp.sh"
-wget -O port-xray "https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/change-port/port-xray.sh"
-wget -O themes "https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/menu/themes.sh"
-wget -O autobackup "https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/system/autobackup.sh"
-wget -O backup "https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/system/backup.sh"
-wget -O bckp "https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/system/bckp.sh"
-wget -O restore "https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/system/restore.sh"
-wget -O ssh "https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/menu/ssh.sh"
+wget -O update "https://raw.githubusercontent.com/rasta-team/MultiportV2/main/update/update.sh"
+wget -O run-update "https://raw.githubusercontent.com/rasta-team/MultiportV2/main/update/run-update.sh"
+wget -O message-ssh "https://raw.githubusercontent.com/rasta-team/MultiportV2/main/update/message-ssh.sh"
+wget -O change-port "https://raw.githubusercontent.com/rasta-team/MultiportV2/main/change.sh"
+wget -O system "https://raw.githubusercontent.com/rasta-team/MultiportV2/main/menu/system.sh"
+wget -O menu "https://raw.githubusercontent.com/rasta-team/MultiportV2/main/menu.sh"
+wget -O add-host "https://raw.githubusercontent.com/rasta-team/MultiportV2/main/system/add-host.sh"
+wget -O check-sc "https://raw.githubusercontent.com/rasta-team/MultiportV2/main/system/running.sh"
+wget -O cert "https://raw.githubusercontent.com/rasta-team/MultiportV2/main/cert.sh"
+wget -O trojaan "https://raw.githubusercontent.com/rasta-team/MultiportV2/main/menu/trojaan.sh"
+wget -O xraay2 "https://raw.githubusercontent.com/rasta-team/MultiportV2/main/menu/xraay2.sh"
+wget -O xp "https://raw.githubusercontent.com/rasta-team/MultiportV2/main/xp.sh"
+wget -O port-xray "https://raw.githubusercontent.com/rasta-team/MultiportV2/main/change-port/port-xray.sh"
+wget -O themes "https://raw.githubusercontent.com/rasta-team/MultiportV2/main/menu/themes.sh"
+wget -O autobackup "https://raw.githubusercontent.com/rasta-team/MultiportV2/main/system/autobackup.sh"
+wget -O backup "https://raw.githubusercontent.com/rasta-team/MultiportV2/main/system/backup.sh"
+wget -O bckp "https://raw.githubusercontent.com/rasta-team/MultiportV2/main/system/bckp.sh"
+wget -O restore "https://raw.githubusercontent.com/rasta-team/MultiportV2/main/system/restore.sh"
+wget -O ssh "https://raw.githubusercontent.com/rasta-team/MultiportV2/main/menu/ssh.sh"
 chmod +x update
 chmod +x run-update
 chmod +x message-ssh
@@ -139,7 +139,7 @@ clear
 echo -e ""
 echo -e "\e[0;32mDownloaded successfully!\e[0m"
 echo ""
-ver=$( curl https://raw.githubusercontent.com/${GitUser}/version/main/version.conf )
+ver=$( curl https://raw.githubusercontent.com/rasta-team/version/main/version.conf )
 sleep 1
 echo -e "\e[0;32mPatching New Update, Please Wait...\e[0m"
 echo ""

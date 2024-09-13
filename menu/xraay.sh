@@ -1,6 +1,6 @@
 #!/bin/bash
-#wget https://github.com/${GitUser}/
-GitUser="KhaiVpn767"
+#wget https://github.com/rasta-team/
+GitUser="rasta-team"
 
 # // IZIN SCRIPT
 export MYIP=$(curl -sS ipv4.icanhazip.com)
@@ -9,7 +9,7 @@ export MYIP=$(curl -sS ipv4.icanhazip.com)
 VALIDITY () {
     clear
     today=`date -d "0 days" +"%Y-%m-%d"`
-    Exp1=$(curl -sS https://raw.githubusercontent.com/${GitUser}/allow/main/ipvps.conf | grep $MYIP | awk '{print $4}')
+    Exp1=$(curl -sS https://raw.githubusercontent.com/rasta-team/allow/main/ipvps.conf | grep $MYIP | awk '{print $4}')
     if [[ $today < $Exp1 ]]; then
     echo -e "\e[32mYOUR SCRIPT ACTIVE..\e[0m"
     else
@@ -18,7 +18,7 @@ VALIDITY () {
     exit 0
 fi
 }
-IZIN=$(curl -sS https://raw.githubusercontent.com/${GitUser}/allow/main/ipvps.conf | awk '{print $5}' | grep $MYIP)
+IZIN=$(curl -sS https://raw.githubusercontent.com/rasta-team/allow/main/ipvps.conf | awk '{print $5}' | grep $MYIP)
 if [ $MYIP = $IZIN ]; then
 echo -e "\e[32mPermission Accepted...\e[0m"
 VALIDITY

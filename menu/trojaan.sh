@@ -1,6 +1,6 @@
 #!/bin/bash
-#wget https://github.com/${GitUser}/
-GitUser="KhaiVpn767"
+#wget https://github.com/rasta-team/
+GitUser="rasta-team"
 
 # // IZIN SCRIPT
 export MYIP=$(curl -sS ipv4.icanhazip.com)
@@ -8,7 +8,7 @@ export MYIP=$(curl -sS ipv4.icanhazip.com)
 # // Valid Script
 VALIDITY () {
     today=`date -d "0 days" +"%Y-%m-%d"`
-    Exp1=$(curl -sS https://raw.githubusercontent.com/${GitUser}/allow/main/ipvps.conf | grep $MYIP | awk '{print $4}')
+    Exp1=$(curl -sS https://raw.githubusercontent.com/rasta-team/allow/main/ipvps.conf | grep $MYIP | awk '{print $4}')
     if [[ $today < $Exp1 ]]; then
     echo -e "\e[32mYOUR SCRIPT ACTIVE..\e[0m"
     else
@@ -17,7 +17,7 @@ VALIDITY () {
     exit 0
 fi
 }
-IZIN=$(curl -sS https://raw.githubusercontent.com/${GitUser}/allow/main/ipvps.conf | awk '{print $5}' | grep $MYIP)
+IZIN=$(curl -sS https://raw.githubusercontent.com/rasta-team/allow/main/ipvps.conf | awk '{print $5}' | grep $MYIP)
 if [ $MYIP = $IZIN ]; then
 echo -e "\e[32mPermission Accepted...\e[0m"
 VALIDITY
@@ -415,8 +415,8 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${user_EXISTS} == '0' ]]; do
 			exit 1
 		fi
 	done
-export patchtls=/KhaiVpn767-trojanwstls
-export patchnone=/KhaiVpn767-trojanwsntls
+export patchtls=/rasta-team-trojanwstls
+export patchnone=/rasta-team-trojanwsntls
 read -p "   Bug Address (Example: www.google.com) : " address
 read -p "   Bug SNI (Example : m.facebook.com) : " sni
 read -p "   Expired (days) : " masaaktif
@@ -494,8 +494,8 @@ export masaaktif="1"
 export exp=$(date -d "$masaaktif days" +"%Y-%m-%d")
 export user=Trial`</dev/urandom tr -dc X-Z0-9 | head -c4`
 
-export patchtls=/KhaiVpn767-trojanwstls
-export patchnone=/KhaiVpn767-trojanwsntls
+export patchtls=/rasta-team-trojanwstls
+export patchnone=/rasta-team-trojanwsntls
 
 read -p "   Bug Address (Example: www.google.com) : " address
 read -p "   Bug SNI (Example : m.facebook.com) : " sni
@@ -684,8 +684,8 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^#trws " "/usr/local/etc/xray/trojan.json")
 			read -rp "Select one client [1-${NUMBER_OF_CLIENTS}]: " CLIENT_NUMBER
 		fi
 	done
-export patchtls=/KhaiVpn767-trojanwstls
-export patchnone=/KhaiVpn767-trojanwsntls
+export patchtls=/rasta-team-trojanwstls
+export patchnone=/rasta-team-trojanwsntls
 export user=$(grep -E "^#trws " "/usr/local/etc/xray/trojan.json" | cut -d ' ' -f 2 | sed -n "${CLIENT_NUMBER}"p)
 export harini=$(grep -E "^#trws " "/usr/local/etc/xray/trojan.json" | cut -d ' ' -f 4 | sed -n "${CLIENT_NUMBER}"p)
 export exp=$(grep -E "^#trws " "/usr/local/etc/xray/trojan.json" | cut -d ' ' -f 3 | sed -n "${CLIENT_NUMBER}"p)

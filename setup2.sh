@@ -1,6 +1,6 @@
 #!/bin/bash
-#wget https://github.com/${GitUser}/
-GitUser="KhaiVpn767"
+#wget https://github.com/rasta-team/
+GitUser="rasta-team"
 # Color Validation
 Lred='\e[1;91m'
 Lgreen='\e[92m'
@@ -21,9 +21,9 @@ echo ''
 echo "                                                              "
 echo -e "$Lyellow                ⚡ PREMIUM SPEED SCRIPT ⚡"$NC
 echo -e "$green.........................................................."$NC
-echo -e "$Lyellow                  Autoscript By KhaiVpn"$NC
+echo -e "$Lyellow                  Autoscript By RastaVpn"$NC
 echo -e "$Lyellow                    CONTACT TELEGRAM"$NC
-echo -e "$Lyellow                       @Khaivpn"$NC
+echo -e "$Lyellow                       @RastaVpn"$NC
 echo -e "$green.........................................................."$NC
 echo ''
 echo -e "$Lyellow                       Wait 6 Seconds!"$NC
@@ -49,9 +49,9 @@ clear
 # Valid Script
 VALIDITY() {
     today=$(date -d "0 days" +"%Y-%m-%d")
-    Exp1=$(curl https://raw.githubusercontent.com/${GitUser}/allow/main/ipvps.conf | grep $MYIP | awk '{print $4}')
+    Exp1=$(curl https://raw.githubusercontent.com/rasta-team/allow/main/ipvps.conf | grep $MYIP | awk '{print $4}')
     if [[ $today < $Exp1 ]]; then
-        echo -e "\e[32mCongratulations! You are Allowed to use AUTOSCRIPT KhaiVpn767..\e[0m"
+        echo -e "\e[32mCongratulations! You are Allowed to use AUTOSCRIPT rasta-team..\e[0m"
         sleep 5
     else
         echo -e "\e[31mYOUR SCRIPT HAS EXPIRED!\e[0m"
@@ -62,9 +62,9 @@ VALIDITY() {
 # Valid Script
 VALIDITY() {
     today=$(date -d "0 days" +"%Y-%m-%d")
-    Exp1=$(curl https://raw.githubusercontent.com/${GitUser}/allow/main/ipvps.conf | grep $MYIP | awk '{print $4}')
+    Exp1=$(curl https://raw.githubusercontent.com/rasta-team/allow/main/ipvps.conf | grep $MYIP | awk '{print $4}')
     if [[ $today < $Exp1 ]]; then
-        echo -e "\e[32mCongratulations! You are Allowed to use AUTOSCRIPT KhaiVpn767..\e[0m"
+        echo -e "\e[32mCongratulations! You are Allowed to use AUTOSCRIPT rasta-team..\e[0m"
         sleep 5
     else
         echo -e "\e[31mYOUR SCRIPT HAS EXPIRED!\e[0m"
@@ -72,7 +72,7 @@ VALIDITY() {
         exit 0
     fi
 }
-IZIN=$(curl https://raw.githubusercontent.com/${GitUser}/allow/main/ipvps.conf | awk '{print $5}' | grep $MYIP)
+IZIN=$(curl https://raw.githubusercontent.com/rasta-team/allow/main/ipvps.conf | awk '{print $5}' | grep $MYIP)
 if [ $MYIP = $IZIN ]; then
     echo -e "\e[32mPermission Accepted...\e[0m"
     VALIDITY
@@ -86,7 +86,7 @@ clear
 echo -e "\e[32mloading...\e[0m"
 clear
 mkdir /var/lib/premium-script;
-default_email=$( curl https://raw.githubusercontent.com/${GitUser}/email/main/default.conf )
+default_email=$( curl https://raw.githubusercontent.com/rasta-team/email/main/default.conf )
 clear
 #Nama penyedia script
 echo -e "\e[1;32m════════════════════════════════════════════════════════════\e[0m"
@@ -131,12 +131,12 @@ echo $host1 > /root/domain
 echo ""
 elif [[ $host == "2" ]]; then
 #install cf
-wget https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/install/cf.sh && chmod +x cf.sh && ./cf.sh
+wget https://raw.githubusercontent.com/rasta-team/MultiportV2/main/install/cf.sh && chmod +x cf.sh && ./cf.sh
 rm -f /root/cf.sh
 clear
 else
 echo -e "Random Subdomain/Domain is used"
-wget https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/install/cf.sh && chmod +x cf.sh && ./cf.sh
+wget https://raw.githubusercontent.com/rasta-team/MultiportV2/main/install/cf.sh && chmod +x cf.sh && ./cf.sh
 rm -f /root/cf.sh
 clear
 fi
@@ -151,7 +151,7 @@ echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━�
 echo -e "$Magenta     INSTALLING SSH & OVPN              $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
-wget https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/install/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
+wget https://raw.githubusercontent.com/rasta-team/MultiportV2/main/install/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
 echo -e "\e[0;32mDONE INSTALLING SSH & OVPN\e[0m"
 clear 
 #Instal SLOW-DNS
@@ -159,7 +159,7 @@ echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━�
 echo -e "$Magenta      INSTALLING SLOW-DNS               $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
-wget https://raw.githubusercontent.com/KhaiVpn767/SlowDnsV1/main/dns2.sh && chmod +x dns2.sh && ./dns2.sh
+wget https://raw.githubusercontent.com/rasta-team/SlowDnsV1/main/dns2.sh && chmod +x dns2.sh && ./dns2.sh
 echo -e "\e[0;32mDONE Install SLDNS\e[0m"
 clear
 #install Xray
@@ -167,7 +167,7 @@ echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━�
 echo -e "$Magenta      INSTALLING XRAY CORE              $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
-wget https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/install/ins-xray2.sh && chmod +x ins-xray2.sh && screen -S ins-xray ./ins-xray2.sh
+wget https://raw.githubusercontent.com/rasta-team/MultiportV2/main/install/ins-xray2.sh && chmod +x ins-xray2.sh && screen -S ins-xray ./ins-xray2.sh
 echo -e "\e[0;32mDONE INSTALLING XRAY CORE\e[0m"
 clear
 #install ohp-server
@@ -175,9 +175,9 @@ echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━�
 echo -e "$Magenta       INSTALLING OHP PORT              $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
-wget https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/install/ohp.sh && chmod +x ohp.sh && ./ohp.sh
-wget https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/install/ohp-dropbear.sh && chmod +x ohp-dropbear.sh && ./ohp-dropbear.sh
-wget https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/install/ohp-ssh.sh && chmod +x ohp-ssh.sh && ./ohp-ssh.sh
+wget https://raw.githubusercontent.com/rasta-team/MultiportV2/main/install/ohp.sh && chmod +x ohp.sh && ./ohp.sh
+wget https://raw.githubusercontent.com/rasta-team/MultiportV2/main/install/ohp-dropbear.sh && chmod +x ohp-dropbear.sh && ./ohp-dropbear.sh
+wget https://raw.githubusercontent.com/rasta-team/MultiportV2/main/install/ohp-ssh.sh && chmod +x ohp-ssh.sh && ./ohp-ssh.sh
 echo -e "\e[0;32mDONE INSTALLING OHP PORT\e[0m"
 clear
 #install websocket
@@ -185,7 +185,7 @@ echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━�
 echo -e "$Magenta   INSTALLING WEBSOCKET PORT            $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
-wget https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/websocket-python/websocket.sh && chmod +x websocket.sh && screen -S websocket.sh ./websocket.sh
+wget https://raw.githubusercontent.com/rasta-team/MultiportV2/main/websocket-python/websocket.sh && chmod +x websocket.sh && screen -S websocket.sh ./websocket.sh
 echo -e "\e[0;32mDONE INSTALLING WEBSOCKET PORT\e[0m"
 clear
 #install SET-BR
@@ -193,7 +193,7 @@ echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━�
 echo -e "$Magenta        INSTALLING SET-BR               $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
-wget https://raw.githubusercontent.com/KhaiVpn767/MultiportV5/main/set-br.sh && chmod +x set-br.sh && ./set-br.sh
+wget https://raw.githubusercontent.com/rasta-team/MultiportV2/main/install/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 echo -e "\e[0;32mDONE INSTALLING SET-BR...\e[0m"
 clear
 #install UDP-CUSTOM
@@ -201,7 +201,7 @@ echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━�
 echo -e "$Magenta     INSTALLING UDP-CUSTOM              $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
-wget https://raw.githubusercontent.com/KhaiVpn767/multiport/main/Tunnel/udp.sh && chmod +x udp.sh && ./udp.sh
+wget https://raw.githubusercontent.com/rasta-team/multiport/main/Tunnel/udp.sh && chmod +x udp.sh && ./udp.sh
 echo -e "\e[0;32mDONE INSTALLING UDP-CUSTOM...\e[0m"
 clear
 # set time GMT +8
@@ -213,9 +213,9 @@ apt -y install nginx
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/nginx.conf"
+wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/rasta-team/MultiportV2/main/nginx.conf"
 mkdir -p /home/vps/public_html
-wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/vps.conf"
+wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/rasta-team/MultiportV2/main/vps.conf"
 /etc/init.d/nginx restart
 #finish
 rm -f /root/ssh-vpn.sh
@@ -235,7 +235,7 @@ echo "47m" > /etc/back
 echo "1;35m" > /etc/number
 echo 3d > /usr/bin/test
 # Version
-ver=$( curl https://raw.githubusercontent.com/${GitUser}/version/main/version.conf )
+ver=$( curl https://raw.githubusercontent.com/rasta-team/version/main/version.conf )
 history -c
 echo "$ver" > /home/ver
 clear
@@ -298,13 +298,13 @@ echo "   - Auto Delete Expired Account" | tee -a log-install.txt
 echo "   - Full Orders For Various Services" | tee -a log-install.txt
 echo "   - White Label" | tee -a log-install.txt
 echo "   - Installation Log --> /root/log-install.txt"  | tee -a log-install.txt
-echo -e "\e[1;33m══════════════════ Autoscript By KhaiVpn767 ══════════════════\e[0m" | tee -a log-install.txt
+echo -e "\e[1;33m══════════════════ Autoscript By rasta-team ══════════════════\e[0m" | tee -a log-install.txt
 sleep 7
 clear
 echo ""
 echo -e "    \e[1;31m.------------------------------------------.\e[0m"
 echo -e "    \e[1;33m|     SUCCESFULLY INSTALLED THE SCRIPT     |\e[0m"
-echo -e "    \e[1;33m|           PREMIUM BY KhaiVpn             |\e[0m"
+echo -e "    \e[1;33m|           PREMIUM BY RastaVPN            |\e[0m"
 echo -e "    \e[1;31m'------------------------------------------'\e[0m"
 echo ""
 echo -e "   \e[1;34mYour VPS Will Be Automatical Reboot In 7 seconds\e[0m"

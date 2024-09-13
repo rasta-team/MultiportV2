@@ -1,5 +1,5 @@
 #!/bin/bash
-#wget https://github.com/${GitUser}/
+#wget https://github.com/rasta-team/
 GitUser="KhaiVpn767"
 #IZIN SCRIPT
 MYIP=$(curl -sS ipv4.icanhazip.com)
@@ -116,16 +116,16 @@ htop
 message-ssh
 ;;
 77)
-wget https://raw.githubusercontent.com/KhaiVpn767/SlowDnsV1/main/dns2.sh && chmod +x dns2.sh && ./dns2.sh
+wget https://raw.githubusercontent.com/rasta-team/SlowDnsV1/main/dns2.sh && chmod +x dns2.sh && ./dns2.sh
 ;;
 88)
-wget https://raw.githubusercontent.com/KhaiVpn767/multiport/main/Tunnel/udp.sh && chmod +x udp.sh && ./udp.sh
+wget https://raw.githubusercontent.com/rasta-team/multiport/main/Tunnel/udp.sh && chmod +x udp.sh && ./udp.sh
 ;;
 99)
-wget -q -O /usr/bin/xraychanger "https://raw.githubusercontent.com/KhaiVpn767/MultiportV3/main/xraychanger.sh" && chmod +x /usr/bin/xraychanger && xraychanger
+wget -q -O /usr/bin/xraychanger "https://raw.githubusercontent.com/rasta-team/MultiportV03/main/xraychanger.sh" && chmod +x /usr/bin/xraychanger && xraychanger
 ;;
 100)
-wget https://raw.githubusercontent.com/KhaiVpn767/MultiportV2/main/updatefile.sh && chmod +x updatefile.sh && ./updatefile.sh
+wget https://raw.githubusercontent.com/rasta-team/MultiportV2/main/updatefile.sh && chmod +x updatefile.sh && ./updatefile.sh
 ;;
 0)
 menu

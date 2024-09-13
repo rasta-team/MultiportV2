@@ -1,6 +1,6 @@
 #!/bin/bash
-#wget https://github.com/${GitUser}/
-GitUser="KhaiVpn767"
+#wget https://github.com/rasta-team/
+GitUser="rasta-team"
 #IZIN SCRIPT
 MYIP=$(curl -sS ipv4.icanhazip.com)
 echo -e "\e[32mloading...\e[0m"
@@ -8,7 +8,7 @@ clear
 # Valid Script
 VALIDITY () {
     today=`date -d "0 days" +"%Y-%m-%d"`
-    Exp1=$(curl https://raw.githubusercontent.com/${GitUser}/allow/main/ipvps.conf | grep $MYIP | awk '{print $4}')
+    Exp1=$(curl https://raw.githubusercontent.com/rasta-team/allow/main/ipvps.conf | grep $MYIP | awk '{print $4}')
     if [[ $today < $Exp1 ]]; then
     echo -e "\e[32mYOUR SCRIPT ACTIVE..\e[0m"
     else
@@ -17,7 +17,7 @@ VALIDITY () {
     exit 0
 fi
 }
-IZIN=$(curl https://raw.githubusercontent.com/${GitUser}/allow/main/ipvps.conf | awk '{print $5}' | grep $MYIP)
+IZIN=$(curl https://raw.githubusercontent.com/rasta-team/allow/main/ipvps.conf | awk '{print $5}' | grep $MYIP)
 if [ $MYIP = $IZIN ]; then
 echo -e "\e[32mPermission Accepted...\e[0m"
 VALIDITY
@@ -38,15 +38,15 @@ gl='\e[32;1m'
 clear
 echo ""
 figlet " SCRIPT" | lolcat
-figlet " BY KhaiVpn767" | lolcat
+figlet " BY Rasta-Team" | lolcat
 echo -e "\e[32;1m.-----------------------------------------------.\e[0m"
 echo -e "\e[32;1m|               \e[36;1mINFO SCRIPT VPS\e[0m                 \e[32;1m|\e[0m"
 echo -e "\e[32;1m'-----------------------------------------------'\e[0m"
-echo -e "           \e[031;1m> Premium Script By KhaiVpn767 <\e[0m" | lolcat
+echo -e "           \e[031;1m> Premium Script By Rasta-Team <\e[0m" | lolcat
 echo -e " \e[0;32m_______________________________________________\e[0m"
 echo -e "\e[0;32m|    \e[1;35mFor OS Debian 10 & Ubuntu 20.04 64 bit     \e[0;32m|\e[0m"
-echo -e "\e[0;32m|  \e[1;35mFor VPS with KVM and VMWare KhaiVpn767         \e[0;32m|\e[0m"
+echo -e "\e[0;32m|  \e[1;35mFor VPS with KVM and VMWare Rasta-Team         \e[0;32m|\e[0m"
 echo -e "\e[0;32m|               \e[1;35mI HOPE YOU HAPPY                \e[0;32m|\e[0m"
 echo -e "\e[0;32m|_______________________________________________\e[0;32m|\e[0m"
-echo -e "\e[0;32m|_______________\e[36;1mTHANKYOU SUPPORT\e[0m\e[0;32m________________|\e[0m"
+echo -e "\e[0;32m|_______________\e[36;1mTHANK YOU SUPPORT\e[0m\e[0;32m________________|\e[0m"
 echo -e "               \e[0;32m'----------------'\e[0m"

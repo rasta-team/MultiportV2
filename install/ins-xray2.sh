@@ -1,6 +1,6 @@
 #!/bin/bash
-# // wget https://github.com/${GitUser}/
-GitUser="KhaiVpn767"
+# // wget https://github.com/rasta-team/
+GitUser="rasta-team"
 
 # // MY IPVPS
 export MYIP=$(curl -sS ipv4.icanhazip.com)
@@ -8,7 +8,7 @@ export MYIP=$(curl -sS ipv4.icanhazip.com)
 # // GETTING
 VALIDITY () {
     today=`date -d "0 days" +"%Y-%m-%d"`
-    Exp1=$(curl -sS https://raw.githubusercontent.com/${GitUser}/allow/main/ipvps.conf | grep $MYIP | awk '{print $4}')
+    Exp1=$(curl -sS https://raw.githubusercontent.com/rasta-team/allow/main/ipvps.conf | grep $MYIP | awk '{print $4}')
     if [[ $today < $Exp1 ]]; then
     echo -e "\e[32mYOUR SCRIPT ACTIVE..\e[0m"
     else
@@ -17,7 +17,7 @@ VALIDITY () {
     exit 0
 fi
 }
-IZIN=$(curl -sS https://raw.githubusercontent.com/${GitUser}/allow/main/ipvps.conf | awk '{print $5}' | grep $MYIP)
+IZIN=$(curl -sS https://raw.githubusercontent.com/rasta-team/allow/main/ipvps.conf | awk '{print $5}' | grep $MYIP)
 if [ $MYIP = $IZIN ]; then
 echo -e "\e[32mPermission Accepted...\e[0m"
 VALIDITY
@@ -66,7 +66,7 @@ systemctl stop nginx
 
 # // INSTALL CERTIFICATES
 mkdir /root/.acme.sh
-curl https://raw.githubusercontent.com/KhaiVpn767/MultiportV2/main/acme.sh -o /root/.acme.sh/acme.sh
+curl https://raw.githubusercontent.com/rasta-team/MultiportV2/main/acme.sh -o /root/.acme.sh/acme.sh
 chmod +x /root/.acme.sh/acme.sh
 /root/.acme.sh/acme.sh --upgrade --auto-upgrade
 /root/.acme.sh/acme.sh --set-default-ca --server letsencrypt
@@ -141,7 +141,7 @@ cat> /usr/local/etc/xray/config.json << END
                         "xver": 1
                     },
                     {
-                        "path": "/KhaiVpn767-trojanwstls", # // TROJAN WS TLS
+                        "path": "/rasta-team-trojanwstls", # // TROJAN WS TLS
                         "dest": 1214,
                         "xver": 1
                     }
@@ -833,7 +833,7 @@ cat> /usr/local/etc/xray/trojan.json << END
            "network": "ws",
            "wsSettings": {
              "acceptProxyProtocol": true,
-               "path": "/KhaiVpn767-trojanwstls"
+               "path": "/rasta-team-trojanwstls"
              }
           }
        }
@@ -944,7 +944,7 @@ cat> /usr/local/etc/xray/trojannone.json << END
            "network": "ws",
            "wsSettings": {
              "acceptProxyProtocol": true,
-               "path": "/KhaiVpn767-trojanwsntls"
+               "path": "/rasta-team-trojanwsntls"
              }
           }
        }
@@ -1064,7 +1064,7 @@ cat> /usr/local/etc/xray/none.json << END
             "xver": 1
           },
           {
-             "path": "/KhaiVpn767-trojanwsntls", # // TROJAN NONE
+             "path": "/rasta-team-trojanwsntls", # // TROJAN NONE
             "dest": 1303,
             "xver": 1
           }
@@ -1200,10 +1200,10 @@ systemctl restart xray@trojannone
 
 # download script
 cd /usr/bin
-wget -O port-xray "https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/change-port/port-xray.sh"
-wget -O certv2ray "https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/cert.sh"
-wget -O trojaan "https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/menu/trojaan.sh"
-wget -O xraay "https://raw.githubusercontent.com/${GitUser}/MultiportV2/main/menu/xraay2.sh"
+wget -O port-xray "https://raw.githubusercontent.com/rasta-team/MultiportV2/main/change-port/port-xray.sh"
+wget -O certv2ray "https://raw.githubusercontent.com/rasta-team/MultiportV2/main/cert.sh"
+wget -O trojaan "https://raw.githubusercontent.com/rasta-team/MultiportV2/main/menu/trojaan.sh"
+wget -O xraay "https://raw.githubusercontent.com/rasta-team/MultiportV2/main/menu/xraay2.sh"
 chmod +x port-xray
 chmod +x certv2ray
 chmod +x trojaan
