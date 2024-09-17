@@ -58,13 +58,13 @@
 ## link Tampa SlowDNS & UDP Custom👇👇👇
 
 ```html
-  sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl && wget https://raw.githubusercontent.com/KhaiVpn767/MultiportV2/main/setup.sh && chmod +x setup.sh && sed -i -e 's/\r$//' setup.sh && screen -S setup ./setup.sh
+  sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl && wget https://raw.githubusercontent.com/rasta-team/MultiportV2/main/setup.sh && chmod +x setup.sh && sed -i -e 's/\r$//' setup.sh && screen -S setup ./setup.sh
 ```
 
 ## link Saport All SlowDNS & UDP Custom👇👇👇
 or
 ```html
-  sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl && wget https://raw.githubusercontent.com/KhaiVpn767/MultiportV2/main/setup2.sh && chmod +x setup2.sh && sed -i -e 's/\r$//' setup2.sh && screen -S setup ./setup2.sh
+  sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl && wget https://raw.githubusercontent.com/rasta-team/MultiportV2/main/setup2.sh && chmod +x setup2.sh && sed -i -e 's/\r$//' setup2.sh && screen -S setup ./setup2.sh
 ```
   
  
@@ -116,7 +116,7 @@ or
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
-![photo_2024-03-19_01-29-31](https://github.com/KhaiVpn767/MultiportV2/assets/112326124/bbbc2ead-1b1d-4a5f-930c-717b587ac4cd)
+![photo_2024-03-19_01-29-31](https://github.com/rasta-team/MultiportV2/assets/112326124/bbbc2ead-1b1d-4a5f-930c-717b587ac4cd)
 
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
