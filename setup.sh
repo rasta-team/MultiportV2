@@ -292,6 +292,6 @@ echo -e "    \e[1;33m|           PREMIUM BY KhaiVpn          |\e[0m"
 echo -e "    \e[1;31m'------------------------------------------'\e[0m"
 echo ""
 echo -e "   \e[1;34mYour VPS Will Be Automatical Reboot In 5 seconds\e[0m"
-rm -r setup2.sh
+rm -r setup.sh
 sleep 5
 reboot
